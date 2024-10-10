@@ -1,0 +1,9 @@
+/* Change all blue text to red */
+body {
+  color: red !important;
+}
+
+/* Change all blue backgrounds to red */
+body {
+  background-color: red !important;
+}

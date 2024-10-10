@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Blue to Red Styler",
+  "version": "1.0",
+  "description": "Changes blue styles to red on the specified website.",
+  "permissions": [
+    "activeTab"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://sonomawatertest.nexgenam.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}
