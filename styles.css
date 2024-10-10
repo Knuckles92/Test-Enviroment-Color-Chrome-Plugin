@@ -1,9 +1,9 @@
-/* Change all blue text to red */
-body {
+/* Change text color to red within the sidebar navigation */
+.page-sidebar.cd-side-nav a {
   color: red !important;
 }
 
-/* Change all blue backgrounds to red */
-body {
+/* Change background color to red within the sidebar navigation */
+.page-sidebar.cd-side-nav {
   background-color: red !important;
 }
