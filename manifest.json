@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Blue to Red Styler",
+  "name": "Nexgen Test Site Color Changer",
   "version": "1.0",
-  "description": "Changes blue styles to red on the specified website.",
+  "description": "Changes blue styles to red on the SCWA Nexgen Test Enviroment.",
   "permissions": [
     "activeTab"
   ],
