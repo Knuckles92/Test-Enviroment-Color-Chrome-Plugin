@@ -1,0 +1,9 @@
+/* Change text color to purple within the sidebar navigation */
+.page-sidebar.cd-side-nav a {
+  color: purple !important;
+}
+
+/* Change background color to purple within the sidebar navigation */
+.page-sidebar.cd-side-nav {
+  background-color: purple !important;
+} 

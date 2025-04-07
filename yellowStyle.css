@@ -1,0 +1,9 @@
+/* Change text color to yellow within the sidebar navigation */
+.page-sidebar.cd-side-nav a {
+  color: yellow !important;
+}
+
+/* Change background color to yellow within the sidebar navigation */
+.page-sidebar.cd-side-nav {
+  background-color: yellow !important;
+} 

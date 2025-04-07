@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nexgen Test Site Color Changer Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    .url-container {
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+    }
+    .url-input {
+      width: 60%;
+      padding: 8px;
+      margin-right: 10px;
+    }
+    .color-select {
+      padding: 8px;
+      margin-right: 10px;
+    }
+    .control-buttons {
+      margin-top: 20px;
+    }
+    button {
+      padding: 8px 15px;
+      margin-right: 10px;
+      cursor: pointer;
+    }
+    .tip {
+      margin-top: 20px;
+      padding: 10px;
+      background: #f5f5f5;
+      border-left: 3px solid #333;
+    }
+    .color-preview {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      margin-left: 5px;
+      border: 1px solid #ccc;
+    }
+    .red { background-color: red; }
+    .green { background-color: green; }
+    .purple { background-color: purple; }
+    .yellow { background-color: yellow; }
+  </style>
+</head>
+<body>
+  <h1>Site URL Configuration</h1>
+  <p>Enter URLs where you want the color change to apply. Use wildcard (*) for flexible matching.</p>
+  
+  <div id="urlList">
+    <!-- URL inputs will be added here -->
+  </div>
+  
+  <button id="addUrl">Add Another URL</button>
+  
+  <div class="control-buttons">
+    <button id="save">Save</button>
+    <button id="reset">Reset to Default</button>
+  </div>
+  
+  <div class="tip">
+    <p><strong>Tip:</strong> Use patterns like "https://example.com/*" to match all pages on a domain.</p>
+    <p><strong>Color Options:</strong> 
+      <span class="color-preview red" title="Red"></span> Red
+      <span class="color-preview green" title="Green"></span> Green
+      <span class="color-preview purple" title="Purple"></span> Purple
+      <span class="color-preview yellow" title="Yellow"></span> Yellow
+    </p>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html> 

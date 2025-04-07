@@ -1,0 +1,9 @@
+/* Change text color to red within the sidebar navigation */
+.page-sidebar.cd-side-nav a {
+  color: red !important;
+}
+
+/* Change background color to red within the sidebar navigation */
+.page-sidebar.cd-side-nav {
+  background-color: red !important;
+}
