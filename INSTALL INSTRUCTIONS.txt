@@ -1,0 +1,7 @@
+1. Open Chrome and go to chrome://extensions/
+2. Toggle Developer mode ON (top-right corner)
+3. Click Load unpacked
+4. Select your extension folder
+5. Extension will appear in the extensions list
+
+Note: You may need to pin the extension to your toolbar by clicking the puzzle piece icon and pinning your extension.
