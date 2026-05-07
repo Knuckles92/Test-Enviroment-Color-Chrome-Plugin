@@ -1,10 +1,9 @@
-/* Sidebar background */
+/* ===== V2 dashboard (Ant Design sidebar) ===== */
 aside.ant-layout-sider,
 aside[class*="_sidebar_"] {
   background-color: yellow !important;
 }
 
-/* Sidebar links and menu text */
 aside.ant-layout-sider a,
 aside.ant-layout-sider .ant-menu,
 aside.ant-layout-sider .ant-menu-item,
@@ -13,4 +12,21 @@ aside.ant-layout-sider .ant-menu-title-content,
 aside.ant-layout-sider .ant-menu-submenu-title,
 aside[class*="_sidebar_"] a {
   color: yellow !important;
+}
+
+/* ===== V1 legacy pages (e.g. /App#/...) ===== */
+.page-sidebar.cd-side-nav,
+.page-sidebar.cd-side-nav > ul {
+  background-color: yellow !important;
+}
+
+.page-sidebar.cd-side-nav a {
+  color: yellow !important;
+}
+
+/* Restore hover/focus highlight on flyout submenu items.
+   Yellow on yellow would be invisible, so use white instead. */
+.page-sidebar.cd-side-nav .sub_panel ul a:hover,
+.page-sidebar.cd-side-nav .sub_panel ul a:focus {
+  color: white !important;
 }
