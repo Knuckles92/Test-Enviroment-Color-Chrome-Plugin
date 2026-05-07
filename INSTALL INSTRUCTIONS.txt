@@ -1,7 +1,145 @@
-1. Open Chrome and go to chrome://extensions/
-2. Toggle Developer mode ON (top-right corner)
-3. Click Load unpacked
-4. Select your extension folder
-5. Extension will appear in the extensions list
+==========================================================
+Nexgen Test Site Color Changer - Install Instructions
+==========================================================
 
-Note: You may need to pin the extension to your toolbar by clicking the puzzle piece icon and pinning your extension.
+WHAT THIS EXTENSION DOES
+------------------------
+Recolors the blue UI elements on any website you choose, so a
+test/staging site is visually distinct from production (or just
+so a site looks the way you want).
+
+You configure which URLs get recolored, and what color they
+become, from the extension's options page after installing.
+Any site you have access to in your browser can be added - it is
+not limited to the default URL it ships with.
+
+Out of the box it is preconfigured for the Sonoma Water Nexgen
+test site (https://sonomawatertest.nexgenam.com) in red, but
+that is only an example - feel free to remove it and add your
+own URLs.
+
+
+DOWNLOAD FROM GITHUB
+--------------------
+You need a local copy of the extension folder on your computer.
+Pick whichever option you are comfortable with:
+
+  Option A - Download as ZIP (no Git required)
+  1. Open the GitHub repository page in your browser.
+  2. Click the green "Code" button, then "Download ZIP".
+  3. Open your Downloads folder, right-click the ZIP, and choose
+     "Extract All...". Pick a permanent location, for example:
+        C:\Users\<you>\Documents\nexgen-color-changer
+  4. After extracting you should have a folder that contains
+     manifest.json directly (not a folder inside another folder).
+
+  Option B - Clone with Git
+  1. Open a terminal where you want the folder to live.
+  2. Run:  git clone <repo-url>
+  3. The cloned folder is what you will load into Chrome.
+
+IMPORTANT: Keep the folder somewhere it will not be moved or
+deleted. Chrome loads the extension from this folder every time
+it starts, so if the folder moves the extension will break. Your
+Downloads folder is a bad choice; Documents or a dedicated
+"chrome-extensions" folder is better.
+
+
+INSTALL IN CHROME / EDGE
+------------------------
+1. Open Chrome and go to:  chrome://extensions/
+   (In Microsoft Edge, go to: edge://extensions/)
+2. In the top-right corner, turn ON "Developer mode".
+3. Three buttons will appear at the top-left. Click
+   "Load unpacked".
+4. Browse to the extension folder (the one containing
+   manifest.json) and click "Select Folder".
+5. "Nexgen Test Site Color Changer" should now appear in your
+   extensions list and be enabled.
+
+
+PIN IT TO THE TOOLBAR (recommended)
+-----------------------------------
+1. Click the puzzle-piece icon in the top-right of Chrome.
+2. Find "Nexgen Test Site Color Changer" in the list.
+3. Click the pin icon next to it so it stays visible on the
+   toolbar.
+
+
+CONFIGURE YOUR OWN URLS AND COLORS
+----------------------------------
+This is where you tell the extension which sites to recolor.
+You are not limited to the default URL - add as many of your
+own as you like.
+
+1. On chrome://extensions/, find the extension and click
+   "Details".
+2. Scroll down and click "Extension options".
+   (Or right-click the extension's toolbar icon and choose
+   "Options".)
+3. From here you can:
+   - Add any URL you want the recolor to apply to. Click
+     "Add Another URL" for each new entry. Examples:
+        https://staging.mycompany.com/*
+        https://dev.example.org/*
+        https://sonomawatertest.nexgenam.com/*
+     The wildcard (*) matches everything after it, so
+     "https://example.com/*" covers every page on that domain.
+   - Pick a color per URL: Red, Green, Purple, or Yellow. You
+     can give different sites different colors (e.g. staging =
+     yellow, dev = purple).
+   - Remove the default Nexgen entry if you don't need it.
+   - Click "Save" to apply your changes.
+   - "Reset to Default" wipes your list and restores the
+     original Nexgen / red entry, so use it carefully.
+4. Reload any tabs that were already open for the new color to
+   take effect.
+
+
+VERIFYING IT WORKS
+------------------
+1. Open one of the URLs you added on the options page in a new
+   tab (or the default https://sonomawatertest.nexgenam.com if
+   you kept it).
+2. The previously-blue header / sidebar elements should now
+   appear in the color you chose for that URL.
+3. URLs that are NOT in your options list should look completely
+   normal - the extension only touches sites you explicitly
+   added.
+
+
+UPDATING THE EXTENSION
+----------------------
+When a new version is published to GitHub:
+
+  If you cloned with Git:
+  1. Open a terminal in the extension folder.
+  2. Run:  git pull
+  3. Go to chrome://extensions/ and click the circular reload
+     arrow on the extension's card.
+
+  If you downloaded the ZIP:
+  1. Download the new ZIP from GitHub and extract it over the
+     existing folder (keep the same path so you don't have to
+     re-add it in Chrome). Replace files when prompted.
+  2. Go to chrome://extensions/ and click the circular reload
+     arrow on the extension's card.
+
+
+TROUBLESHOOTING
+---------------
+- "Manifest file is missing or unreadable"
+    You selected the wrong folder. Pick the folder that
+    contains manifest.json directly, not its parent.
+- The extension installed but the test site still looks blue
+    - Make sure the URL in your browser matches one of the
+      URLs configured on the options page.
+    - Hard-refresh the page with Ctrl+F5.
+    - Confirm the extension is toggled ON in
+      chrome://extensions/.
+- The extension disappeared after restarting Chrome
+    The source folder was moved, renamed, or deleted. Put it
+    back, or run "Load unpacked" again.
+- Developer mode keeps prompting / showing a warning banner
+    This is normal for unpacked extensions. It does not mean
+    anything is wrong.

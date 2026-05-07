@@ -1,9 +1,16 @@
-/* Change text color to green within the sidebar navigation */
-.page-sidebar.cd-side-nav a {
-  color: green !important;
+/* Sidebar background */
+aside.ant-layout-sider,
+aside[class*="_sidebar_"] {
+  background-color: green !important;
 }
 
-/* Change background color to green within the sidebar navigation */
-.page-sidebar.cd-side-nav {
-  background-color: green !important;
-} 
+/* Sidebar links and menu text */
+aside.ant-layout-sider a,
+aside.ant-layout-sider .ant-menu,
+aside.ant-layout-sider .ant-menu-item,
+aside.ant-layout-sider .ant-menu-item-icon,
+aside.ant-layout-sider .ant-menu-title-content,
+aside.ant-layout-sider .ant-menu-submenu-title,
+aside[class*="_sidebar_"] a {
+  color: green !important;
+}
